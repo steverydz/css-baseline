@@ -1,0 +1,57 @@
+/* ----------------------------------------------------------------------------
+ * CSS baseline by Steve Rydz (https://steverydz.com)
+ * 
+ * Partly inspired by the following video by Kevin Powell:
+ * https://www.youtube.com/watch?v=eWmDW4zEXt4
+ * 
+ * License type: MIT (https://opensource.org/license/mit)
+ * ------------------------------------------------------------------------- */
+
+/* Layout
+ * ------------------------------------------------------------------------- */
+html {
+  /* Include border and padding when setting the width of an element */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  /* Makes elements inherit the box-sizing value from their parent */
+  box-sizing: inherit;
+}
+
+body {
+  /* Removes default user agent style */
+  margin: 0;
+}
+
+body > :is(header, footer),
+main,
+section,
+article {
+  /* Sets landmark areas as container types */
+  container-type: inline-size;
+}
+
+/* Typography
+ * ------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Balances the number of characters on each line */
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  /* Sets a line-width for better readability */
+  max-width: 65ch;
+
+  /* Keeps the number of orphans to a minimum */
+  text-wrap: pretty;
+}
