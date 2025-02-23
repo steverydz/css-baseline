@@ -55,3 +55,27 @@ figcaption {
   /* Keeps the number of orphans to a minimum */
   text-wrap: pretty;
 }
+
+/* Images
+ * ------------------------------------------------------------------------- */
+img {
+  /* Useful if using the lo-res placeholder image approach
+   * See: https://csswizardry.com/2023/09/the-ultimate-lqip-lcp-technique/ */
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Sets alt text apart if visible on page */
+  font-style: italic;
+
+  /* Prevents overflow */
+  max-width: 100%;
+
+  /* Ensure image keeps aspect ratio */
+  height: auto;
+
+  /* Default shape-margin for floated images */
+  shape-margin: 1rem;
+
+  /* Fixes baseline alignment */
+  vertical-align: middle;
+}
