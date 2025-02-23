@@ -12,6 +12,9 @@
 html {
   /* Include border and padding when setting the width of an element */
   box-sizing: border-box;
+
+  /* Fixes awkward spacing with quotation marks and list bullets */
+  hanging-punctuation: first last;
 }
 
 *,
@@ -78,4 +81,17 @@ img {
 
   /* Fixes baseline alignment */
   vertical-align: middle;
+}
+
+/* Behaviour
+ * ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  /* Smooth scrolling within overflow scroll containers */
+  :has(:target) {
+    /* Smooth scrolling between sections */
+    scroll-behavior: smooth;
+
+    /* Add space above section which as been scrolled to */
+    scroll-padding-top: 3rem;
+  }
 }
